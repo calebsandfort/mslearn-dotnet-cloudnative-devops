@@ -7,9 +7,9 @@ on:
 
 env:
   # Local environment variables used later in the workflow
-  AZURE_CONTAINER_REGISTRY: 'name of your Azure Container Registry'
+  AZURE_CONTAINER_REGISTRY: 'acseshop2558825383'
   CONTAINER_NAME: 'productservice'
-  RESOURCE_GROUP: 'rg-eshop'
+  RESOURCE_GROUP: 'eShoptLite'
   CLUSTER_NAME: 'aks-eshop'
   DEPLOYMENT_MANIFEST_PATH: './product.yml'
   DOCKER_PATH: './DockerfileProducts'
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks out the repository this file is in
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       # Logs in with your Azure credentials stored in GitHub secrets
       - name: Azure login
